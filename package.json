@@ -1,0 +1,31 @@
+{
+  "name": "aws-sdk-service-wrapper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ravibhavsar/aws-sdk-service-wrapper.git",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "test": "nyc mocha",
+    "test:unit": "nyc mocha test/unit"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.419.0"
+  },
+  "devDependencies": {
+    "babel-loader": "^8.0.5",
+    "babel-plugin-dynamic-import-node": "^2.2.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "dotenv": "^6.2.0",
+    "http-custom-errors": "^8.0.0",
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
+    "path": "^0.12.7",
+    "proxyquire": "^2.1.0",
+    "sinon": "^7.2.7",
+    "sinon-chai": "^3.3.0"
+  }
+}

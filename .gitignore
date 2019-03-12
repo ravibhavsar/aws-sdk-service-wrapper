@@ -1,2 +1,16 @@
 # Dependency directory
 node_modules
+
+# mac general files
+*.DS_Store
+*.orig
+.vscode
+
+# nyc output
+.nyc_output
+
+#Logs
+logs
+*.log
+npm-debug.log*
+pattern*.json*

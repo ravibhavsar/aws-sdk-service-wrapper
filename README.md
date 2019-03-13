@@ -24,6 +24,14 @@ Using yarn
 yarn add aws-sdk-service-wrapper
 ```
 
+## Usage
+const SNS = require('aws-sdk-service-wrapper')();
+
+SNS
+  .publish({ region, topicArn, message })
+  .then(/* ... */)
+  .catch(/* ... */)
+
 ## AWS Services
 
 AWS Service               | 	Functions

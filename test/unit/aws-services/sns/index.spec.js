@@ -1,8 +1,7 @@
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
-import { InternalServerError } from 'http-custom-errors';
 
-describe('snsClient', () => {
+describe('sns handler', () => {
   let sandbox = null;
   let snsClient = null;
   let stubbedPublish = null;
@@ -37,7 +36,7 @@ describe('snsClient', () => {
   });
 
   it('should throw interal server error if failed', () => {
-    stubbedPublish.returns({ promise: () => Promise.reject(new Error('original aws error')) });
+    stubbedPublish.returns({ promise: () => Promise.reject('error') });
     return snsClient.publish({
       message: { title: 'some title' },
       topicArn: 'topicArn',
@@ -48,7 +47,7 @@ describe('snsClient', () => {
           Message: '{"title":"some title"}',
           TopicArn: 'topicArn',
         });
-        err.should.be.instanceof(InternalServerError);
+        err.should.eql('error');
       });
   });
 });

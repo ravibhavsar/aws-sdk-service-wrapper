@@ -5,7 +5,6 @@ const publish = ({ region, topicArn, message}) => (
     Message: JSON.stringify(message),
     TopicArn: topicArn,
   }).promise()
-    .catch(err => err)
 );
 
 module.exports = { publish };

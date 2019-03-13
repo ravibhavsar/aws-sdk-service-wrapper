@@ -36,4 +36,5 @@ SNS
 
 AWS Service               | 	Functions
 --------------------------|-----------------------
-SNS                       | publish
+SNS                       | publish()
+SQS                       | sendMessage(), deleteMessage()

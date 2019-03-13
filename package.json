@@ -23,6 +23,7 @@
     "aws-sdk": "^2.419.0"
   },
   "devDependencies": {
+    "await-to-js": "^2.1.1",
     "babel-loader": "^8.0.5",
     "babel-plugin-dynamic-import-node": "^2.2.0",
     "babel-preset-env": "^1.7.0",
@@ -30,7 +31,6 @@
     "babel-register": "^6.26.0",
     "chai": "^4.2.0",
     "dotenv": "^6.2.0",
-    "http-custom-errors": "^8.0.0",
     "mocha": "^6.0.2",
     "nyc": "^13.3.0",
     "path": "^0.12.7",

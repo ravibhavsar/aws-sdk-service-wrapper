@@ -9,3 +9,5 @@ const publish = ({ message, topicArn, region }) => (
 );
 
 module.exports.SNS = { publish }
+
+module.exports = { publish };

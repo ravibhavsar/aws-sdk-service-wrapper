@@ -1,4 +1,4 @@
-import { SQS } from 'aws-sdk';
+const { SQS } = require('aws-sdk');
 
 const sendMessage = ({ region, queueUrl, payload}) => (
     new SQS({ region })

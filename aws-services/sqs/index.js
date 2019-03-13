@@ -1,7 +1,7 @@
 const { SQS } = require('aws-sdk');
 
 const sendMessage = ({ region, queueUrl, payload}) => (
-    new SQS({ region })
+    (new SQS({ region }))
         .sendMessage({
             MessageBody: JSON.stringify(payload),
             QueueUrl: queueUrl,
@@ -11,7 +11,7 @@ const sendMessage = ({ region, queueUrl, payload}) => (
 
 
 const deleteMessage = ({ region, queueUrl, receiptHandle})  => (
-    new SQS({ region })
+    (new SQS({ region }))
         .deleteMessage({
             QueueUrl: queueUrl,
             ReceiptHandle: receiptHandle,

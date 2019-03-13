@@ -1,9 +1,19 @@
 {
   "name": "aws-sdk-service-wrapper",
   "version": "1.0.0",
+  "description": "Wrapper around aws-sdk services functions",
+  "keywords": [
+    "aws-sdk",
+    "wrapper",
+    "aws services",
+    "aws functions",
+    "S3",
+    "SNS",
+    "SQS"
+  ],
   "main": "index.js",
   "repository": "https://github.com/ravibhavsar/aws-sdk-service-wrapper.git",
-  "author": "",
+  "author": "ravdevz",
   "license": "MIT",
   "scripts": {
     "test": "nyc mocha",

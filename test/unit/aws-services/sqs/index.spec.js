@@ -40,9 +40,8 @@ describe('sqs handler', () => {
 
   it('should create sqs record successfully', async () => {
     stubbedSendMessage.returns({ promise: () => Promise.resolve('success') });
-    const [err, result] = await to(fakeHandler.sendMessage({ region, queueUrl, payload }));
+    const result = await fakeHandler.sendMessage({ region, queueUrl, payload });
     stubbedSendMessage.should.have.been.calledWith(sendMessagePayload);
-    expect(err).to.be.a('null');
     result.should.eql('success');
   });
 
@@ -55,9 +54,8 @@ describe('sqs handler', () => {
 
   it('should delete sqs record successfully', async () => {
     stubbedDeleteMessage.returns({ promise: () => Promise.resolve('success') });
-    const [err, result] = await to(fakeHandler.deleteMessage({ region, queueUrl, receiptHandle }));
+    const result = await fakeHandler.deleteMessage({ region, queueUrl, receiptHandle });
     stubbedDeleteMessage.should.have.been.calledWith(deleteMessagePayload);
-    expect(err).to.be.a('null');
     result.should.eql('success');
   });
 

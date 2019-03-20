@@ -1,6 +1,6 @@
 {
   "name": "aws-sdk-service-wrapper",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Wrapper around aws-sdk services functions",
   "keywords": [
     "aws-sdk",

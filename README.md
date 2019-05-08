@@ -4,7 +4,7 @@ Wrapper around [aws-sdk](https://www.npmjs.com/package/aws-sdk) services.
 
 ## Introduction
 
-[aws-sdk-service-wrapper] is a wrapper around aws service functions.
+[![npm version][npm-badge]][npm-url] is a wrapper around aws service functions.
 e.g sns service: publish function
 When [aws-sdk] is widely used in the project, (especially in serverless lambda), logic needs to be written to call `.promise()` function for each services you use. And also handling of the aws error gets repetitive.
 To avoid this, this wrapper can be used.
@@ -39,3 +39,5 @@ AWS Service  | 	Functions
 SNS          | publish
 SQS          | sendMessage, deleteMessage
 S3           | listObjectsV2, deleteObjects, emptyBucketFolder
+
+[npm-url]: https://www.npmjs.com/package/aws-sdk-service-wrapper
